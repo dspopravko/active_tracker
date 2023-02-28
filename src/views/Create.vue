@@ -1,10 +1,12 @@
 <template>
-  <div></div>
+  <div>
+    <h1>Create</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "create",
+  name: "Create",
   setup() {
     // Create data
 
