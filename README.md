@@ -1,4 +1,5 @@
-# workout_tracker
+## Learning project based on Vue3
+
 
 ## Project setup
 ```
