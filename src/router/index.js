@@ -10,26 +10,41 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: "Home",
+    },
   },
   {
     path: "/create",
     name: "Create",
     component: Create,
+    meta: {
+      title: "Create",
+    },
   },
   {
     path: "/login",
     name: "Login",
     component: Login,
+    meta: {
+      title: "Login",
+    },
   },
   {
     path: "/register",
     name: "Register",
     component: Register,
+    meta: {
+      title: "Register",
+    },
   },
   {
     path: "/workout/:workoutId",
     name: "View-workout",
     component: ViewWorkout,
+    meta: {
+      title: "Workout",
+    },
   },
 ];
 
@@ -39,7 +54,10 @@ const router = createRouter({
 });
 
 // Change document titles
-
+router.beforeEach((to, _, next) => {
+  document.title = `${to.meta.title} | Active Tracker`;
+  next();
+});
 // Route guard for auth routes
 
 export default router;
