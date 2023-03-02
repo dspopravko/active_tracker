@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Create from "../views/Create.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
+import ViewWorkout from "../views/ViewWorkout.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/register",
     name: "Register",
     component: Register,
+  },
+  {
+    path: "/workout/:workoutId",
+    name: "View-workout",
+    component: ViewWorkout,
   },
 ];
 
